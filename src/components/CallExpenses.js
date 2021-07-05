@@ -1,8 +1,14 @@
 import Expensitem from "./Expensitem";
+import ExpensesFilter from "./ExpensesFilter";
+import React,{useState} from "react";
 function CallExpenses(props){
+  const [filteredYear,setfilteredYear]=useState('2020');
+function filterChangeHandler(selectedYear){
+console.log(selectedYear);
+}
 
-
-    return(<div>
+    return(<div >
+      <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler}/>
 <Expensitem
       title={props.expenses[0].title}
       amount={props.expenses[0].amount}

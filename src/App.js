@@ -1,5 +1,6 @@
 import CallExpenses from "./components/CallExpenses";
 import NewExpens from "./components/NewExpens";
+import ExpensesFilter from "./components/ExpensesFilter";
 function App() {
   const expenses = [
     {
@@ -32,6 +33,7 @@ const addExpenseHandeler = (expense) =>{
   return (
     <div>
     <NewExpens onAddExpense={addExpenseHandeler}/>
+ 
     <CallExpenses expenses={expenses}/>
     
   </div>
